@@ -7,7 +7,8 @@
     <style>
         /* Modal styling */
         #agreementModal {
-            display: none; /* Hidden by default */
+            /* Keep modal hidden initially */
+            display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -40,6 +41,10 @@
         #agreeButton:hover {
             background-color: #45a049;
         }
+        /* Disable scrolling on the body when modal is active */
+        body.modal-active {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -71,20 +76,21 @@
     </div>
 
     <script>
-        // Show modal on page load if agreement not previously accepted
         document.addEventListener("DOMContentLoaded", function() {
+            // Show the modal only if the license has not been agreed to
             if (!localStorage.getItem("licenseAgreed")) {
                 document.getElementById("agreementModal").style.display = "flex";
+                document.body.classList.add("modal-active");  // Prevent scrolling
             } else {
                 document.getElementById("mainContent").style.display = "block";
             }
         });
 
-        // Handle "I Agree" button click
         document.getElementById("agreeButton").onclick = function() {
-            localStorage.setItem("licenseAgreed", "true");
+            localStorage.setItem("licenseAgreed", "true");  // Store agreement
             document.getElementById("agreementModal").style.display = "none";
             document.getElementById("mainContent").style.display = "block";
+            document.body.classList.remove("modal-active");  // Re-enable scrolling
         };
     </script>
 </body>
