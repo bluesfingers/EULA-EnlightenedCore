@@ -1,1 +1,1 @@
-# NLP Projects for Enlightened Core
+# End User License Agreement - Enlightened Core
