@@ -40,6 +40,10 @@
         #agreeButton:hover {
             background-color: #45a049;
         }
+        /* Disable scrolling on the body when modal is active */
+        body.modal-active {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
@@ -71,20 +75,21 @@
     </div>
 
     <script>
-        // Show modal on page load if agreement not previously accepted
         document.addEventListener("DOMContentLoaded", function() {
+            // Check if license has been accepted
             if (!localStorage.getItem("licenseAgreed")) {
                 document.getElementById("agreementModal").style.display = "flex";
+                document.body.classList.add("modal-active");  // Prevents scrolling
             } else {
                 document.getElementById("mainContent").style.display = "block";
             }
         });
 
-        // Handle "I Agree" button click
         document.getElementById("agreeButton").onclick = function() {
             localStorage.setItem("licenseAgreed", "true");
             document.getElementById("agreementModal").style.display = "none";
             document.getElementById("mainContent").style.display = "block";
+            document.body.classList.remove("modal-active");  // Re-enables scrolling
         };
     </script>
 </body>
