@@ -7,7 +7,6 @@
     <title>Enlightened Core AI License Agreement</title>
 </head>
 <body>
-    <h1>Enlightened Core AI License Agreement</h1>
     <p>Welcome to Enlightened Core AI. Please review the licensing terms below carefully.</p>
 
     <h2>1. Ownership and Intellectual Property Rights</h2>
