@@ -3,16 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-</head>
-<body>
-    <h1>Welcome to End User License Agreement - Enlightened Core</h1>
-    <p>This is where you read and agree to NDA for Enlightened Core project.</p>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enlightened Core AI License Agreement</title>
 </head>
 <body>
@@ -61,9 +51,5 @@
     This Agreement shall be governed by and construed in accordance with the laws of [Your Jurisdiction].</p>
 
     <p>By using this service, you confirm that you have read, understood, and agree to be bound by this License Agreement.</p>
-</body>
-</html>
-
-
 </body>
 </html>
